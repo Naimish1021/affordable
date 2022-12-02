@@ -1,0 +1,94 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Affordable Housing in  {{blog.city}}{% endblock title %}
+{% block css %}
+<style>
+  h2{
+    margin-top:  15px !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+  }
+
+</style>
+{% endblock css %}
+{% block body %}
+<div class="py-6 md:py-12 lg:w-10/12 md:text-center mx-auto">
+
+
+    <!-- #Breadcumbs Start -->
+    <nav class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+          <nav class="bg-grey-light rounded-md w-full" aria-label="breadcrumb">
+            <ol class="list-reset flex">
+              <li><a href="/" class="text-gray-500 hover:text-gray-600">Home</a></li>
+              <li><span class="text-gray-500 mx-2">/</span></li>
+              <li><a href="./../../state/{{blog.state|slugify}}" class="text-gray-500 hover:text-gray-600">{{blog.state}}</a></li>
+              <li><span class="text-gray-500 mx-2">/</span></li>
+              <li><a href="#" class="text-gray-500 hover:text-gray-600"> Affordable Housing In {{blog.city}} , {{blog.state}}</a></li>
+            </ol>
+          </nav>
+        </div>
+      </nav>
+      
+    <!-- #Breadcumbs  End--> 
+    <br>
+      
+  <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
+   Affordable Housing In {{blog.city}} , {{blog.state}}
+  </h1>
+  
+ 
+</div>
+ 
+<div class="flex flex-col md:flex-row py-6 md:py-12">
+
+  <div class="w-full md:w-3/12 pr-3">
+    
+
+    <!-- OTHER CITIES
+
+      <div class="py-6 mt-6 border-t-2 block">
+        
+          <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="category/branding/index.html">Anchorage</a>
+        
+          
+          <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="category/branding/index.html">Barrow</a>
+        
+
+          
+          <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="category/branding/index.html">Bethel</a>
+        
+          
+          <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="category/branding/index.html">Bethel</a>
+        
+          
+          <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="category/branding/index.html">Juneau</a>
+        
+      </div> -->
+    
+  </div>
+
+  
+
+
+  <div class="w-full md:w-9/12">
+    <div class="prose">
+        
+      {{blog.body|safe}}
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="py-6 mt-6 border-t-2 block">
+    <h3 class="text-sm font-medium mb-1">Other Cities</h3>
+    <div>
+      {% for i in alts  %}
+        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="./../../city/{{i.slug}}">{{i.city}}</a>
+        {% endfor %}
+       
+    </div>
+  </div>
+ 
+  {% endblock body %}

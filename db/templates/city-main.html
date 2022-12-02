@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+     
+<head>
+        <meta charset="UTF-8" />
+        <title>Homless Assistance in {{blog.city|capfirst}}, {{blog.state|capfirst}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+        <meta name="author" content="David" />
+	    <meta name="keywords" content="rent assistance in {{blog.city|capfirst}}, {{blog.state|capfirst}} , low income housing in {{blog.city|capfirst}}|{{blog.state|capfirst}}, public housing in {{blog.city|capfirst}},{{blog.state|capfirst}}, {{blog.city|capfirst}},{{blog.state|capfirst}} in subsidized housing" />
+        <meta name="website" content="https://rent-assistance.me/" />
+        <meta name="email" content="support@rent-assistance.me" />
+        <meta name="version" content="1.5.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %} " />
+        <style>
+            h2{
+                margin-top: revert !important;
+                font-size: 1.5rem!important;
+                line-height: 2rem!important;
+                font-weight: bold !important;
+            }
+        </style>
+        <!-- Css -->
+        <link href="{% static 'assets/libs/tiny-slider/tiny-slider.css' %} " rel="stylesheet">
+        <!-- Main Css -->
+        <link href="{% static 'assets/libs/%40iconscout/unicons/css/line.css' %} " type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'assets/css/icons.css' %} " />
+        <link rel="stylesheet" href="{% static 'assets/css/tailwind.min.css' %} " />
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+
+    </head>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <body class="font-nunito text-base text-black dark:text-white dark:bg-slate-900">
+
+    
+        <!-- Start Navbar -->
+        <nav id="topnav" class="defaultscroll is-sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo pl-0" href="/">
+                    <img src="{% static 'assets/images/RENT2.png' %} " class="inline-block dark:hidden" alt="">
+                    <img src="{% static 'assets/images/RENT2.png' %} " class="hidden dark:inline-block" alt="">
+                </a>
+
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+
+             
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu">
+                        <li><a href="/" class="sub-menu-item">Home</a></li>
+                        <li><a href="/contact-us/" class="sub-menu-item">Contact</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </nav>
+        
+        <!-- Start -->
+        <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
+             
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+
+<!--Blog Content Start-->
+<div class="container mx-auto flex flex-wrap py-6">
+        <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image 
+                <a href="#" class="hover:opacity-75">
+                    <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+-->             
+
+                <div class="bg-white flex flex-col justify-start p-6">
+                  
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Homless Assistance in {{blog.city|capfirst}}, {{blog.state|capfirst}} </a>
+                     <hr> <hr> <hr> 
+                     {% comment %} <div class="relative items-center">
+                        <img src='/static/assets/images/{{image}}_.webp' class='w-full' />
+                
+                             <div class="absolute lg:text-2xl font-bold border items-center  p-3 text-white bottom-3   left-1/2 -translate-x-1/2 md:text-xl sm:text-sm" style='background: #FBE759;
+                            color: #452411 !important;  width:70%; text-align:center ; border-color: black;'>Homless Assistance in {{blog.city|capfirst}}, {{blog.state|capfirst}}  </div>
+                         <h3 class="absolute text-2xl text-blue-300 top-5 left-5">Top Left</h3>
+                        <h3 class="absolute text-2xl text-green-300 bottom-5 right-5">Bottom Right</h3> 
+                  </div> {% endcomment %}
+                   {{blog.body|safe}}
+                   {{blog.nextpage|safe}}
+                </div>
+                
+            </article>
+ 
+            <span class="bg-blue-100 text-blue-800 text-xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">AUTHOR</span>
+            <div class="w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6">
+                <div class="w-full md:w-1/5 flex justify-center md:justify-start pb-4">
+                    <img src="{% static 'assets/images/author.png' %}" class="rounded-full shadow h-32 w-32">
+                </div>
+                
+                <div class="flex-1 flex flex-col justify-center md:justify-start">
+                    
+                    <p class="font-semibold text-2xl">David</p>
+                    <p class="pt-2">
+
+I am a Writer who writes articles about helping people and homless assistance. I have experience with helping people in need and I want to help others who may be
+going through the same thing. I hope my articles can help people who are struggling and provide them with information and resources that they may need.
+
+                    <div class="flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4">
+                        <a class="" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+         
+       
+        <!-- End -->
+ </section>
+
+        <!--Blog Content End-->
+
+
+        
+        <!-- Sidebar Section -->
+        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">Homless Assistance in Other Cities</p>
+                {% for i in alts %}
+                <a href="/city/{{i.slug}}/" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+                    {{i.city}}
+                </a>
+                {% endfor %}
+               
+            </div>
+<!-- 
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">Instagram</p>
+                <div class="grid grid-cols-3 gap-3">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
+                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
+                </div>
+                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+                    <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
+                </a>
+            </div> -->
+
+        </aside>
+
+    </div>
+    
+
+        <!-- Start -->
+        {% comment %} <section class="relative lg:py-24 py-16">
+            <div class="container">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
+                    <div class="group rounded-md bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-800 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                       
+                   
+                        <div class="p-6">
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Name</span>
+                                    <p class="text-lg font-medium">Tony's NY Pizza - Oakton
+                                    </p>
+                                </li>
+                            </ul>
+
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <p class="text-lg font-medium">4.2 (80)</p>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Phone</span>
+                                    <p class="text-lg font-medium">+1 703-537-0144</p>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Website</span>
+                                    <p class="text-lg font-medium"><a href="#" >Click Here To visit</a></p>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Google Map Location</span>
+                                    <p class="text-lg font-medium"><a href="https://maps.google.com/?cid=1189266352373983154" >https://maps.google.com/?cid=1189266352373983154</a></p>
+                                </li>
+                            </ul>
+
+                            
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Time Table</span>
+                                    <p class="text-lg font-medium">
+                                        <table class="table-auto text-left">
+                                    
+                                            <tr scop='row ' class='border-b'>
+                                                <td>Monday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Tuesday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Wednesday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Thursday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Friday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Saturday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                            <tr scop='row ' class='border-b'>
+                                                <td> Sunday: 11:00 AM – 11:00 PM</td>
+                                                </td>
+                                                
+                                        </table>
+                                    </p>
+                                </li>
+                            </ul>
+
+                  
+                        </div>
+                    </div><!--end property content-->
+ 
+                    
+                    <!--end property content-->
+
+                </div>
+                
+                
+                <!--en grid-->
+        
+ 
+
+
+
+
+            <div class="container md:mt-24 mt-16 md:mb-12">
+                <div class="grid grid-cols-1 text-center">
+                    <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Have Question ? Get in touch!</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto"> We'll do our best to get back to you as soon as possible.</p>
+                
+                    <div class="mt-6">
+                        <a href="/contact-us/" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2"><i class="uil uil-phone"></i> Contact us</a>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container--> {% endcomment %}
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-dark-footer">
+                <svg class="w-full h-auto" viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- End -->
+        
+        <!-- Footer Start -->
+        <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">    
+            <div class="container">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12">
+                        <div class="py-[60px] px-0">
+                            <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
+                                <div class="lg:col-span-4 md:col-span-12">
+                                    {% comment %} <a href="#" class="text-[22px] focus:outline-none">
+                                        <img src="{% static 'assets/images/logo-light.png' %} " alt="">
+                                    </a> {% endcomment %}
+                                    <p class="mt-6 text-gray-300">Our Website provides information and resources for people who are struggling to pay their rent. Our Website includes a directory of rent assistance programs, articles and advice on how to avoid eviction, and a forum where users can share their stories and offer support to others.</p>
+
+                                     <!-- Social Buttons Start  
+
+                                    <ul class="list-none mt-6">
+                                        <li class="inline"><a href="https://1.envato.market/techwind" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
+                                        <li class="inline"><a href="https://dribbble.com/shreethemes" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
+                                        <li class="inline"><a href="https://www.behance.net/shreethemes" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-behance" title="Behance"></i></a></li>
+                                        <li class="inline"><a href="http://linkedin.com/company/shreethemes" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-linkedin" title="Linkedin"></i></a></li>
+                                        <li class="inline"><a href="https://www.facebook.com/shreethemes" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+                                        <li class="inline"><a href="https://www.instagram.com/shreethemes/" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+                                        <li class="inline"><a href="https://twitter.com/shreethemes" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
+                                        <li class="inline"><a href="mailto:support@shreethemes.in" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-envelope align-middle" title="email"></i></a></li>
+                                        <li class="inline"><a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i class="uil uil-file align-middle" title="customization"></i></a></li>
+                                    </ul>
+                                    
+                                    end  Social icon-->
+
+
+                                </div><!--end col-->
+                        
+                                <div class="lg:col-span-2 md:col-span-4">
+                                    <h5 class="tracking-[1px] text-gray-100 font-semibold">Usefull Links</h5>
+                                    <ul class="list-none footer-list mt-6">
+                                        
+                                        <li class="mt-[10px]"><a href="/sitemap.xml" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b me-1"></i>Sitemap</a></li>
+
+                                        <li class="mt-[10px]"><a href="/contact-us/" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b me-1"></i>Contact us</a></li>
+
+
+
+
+                                    </ul>
+                                </div>
+                                
+                                
+                                <!--end col-->
+                        
+                                
+                                <div class="lg:col-span-3 md:col-span-4">
+                                    <h5 class="tracking-[1px] text-gray-100 font-semibold">Newsletter</h5>
+                                    <p class="mt-6">Sign up and receive the latest tips via email.</p>
+                                    <form>
+                                        <div class="grid grid-cols-1">
+                                            <div class="foot-subscribe my-3">
+                                                <label class="form-label">Write your email <span class="text-red-600">*</span></label>
+                                                <div class="form-icon relative mt-2">
+                                                    <i data-feather="mail" class="w-4 h-4 absolute top-3 left-4"></i>
+                                                    <input type="email" class="form-input bg-gray-800 border border-gray-800 text-gray-100 pl-12 focus:shadow-none" placeholder="Email" name="email" required="">
+                                                </div>
+                                            </div>
+                                        
+                                            <button type="submit" id="submitsubscribe" name="send" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div><!--end col-->
+                            </div><!--end grid-->
+                        </div><!--end col-->
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="py-[30px] px-0 border-t border-slate-800">
+                <div class="container text-center">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="md:text-left text-center">
+                            <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Homless Assistance. Design with <i class="mdi mdi-heart text-red-600"></i>  </p>
+                        </div>
+
+                 
+                    </div><!--end grid-->
+                </div><!--end container-->
+            </div>
+        </footer><!--end footer-->
+        <!-- Footer End -->
+     
+
+        <!-- JAVASCRIPTS -->
+        
+        <script src="{% static 'assets/libs/feather-icons/feather.min.js' %} "></script>
+        <script src="{% static 'assets/js/plugins.init.js' %} "></script>
+        <script src="{% static 'assets/js/app.js' %} "></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+
+</html>

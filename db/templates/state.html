@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+<!DOCTYPE html>
+{% block title %}  {{state}} - Affordable Housing Assistance{% endblock title %}
+{% block body %}
+<div class="py-6 md:py-12 lg:w-10/12 ">
+  
+  <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
+    <em>{{state}}</em> Affordable Housing Assistance
+  </h1>
+  
+</div>
+  
+
+
+
+<main class="py-6">
+  <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px] mt-8">
+    {% for i in list %}
+  <a href = './../../city/{{i.slug}}/'class="lg:col-span-4 md:col-span-6">
+    <div class="flex transition-all duration-500 hover:scale-105 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 ease-in-out items-center p-3 rounded-md bg-white dark:bg-slate-900"> 
+        <div class="flex-1">
+            <h4 class="mb-0 text-lg font-medium">{{i.city}}</h4>
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+
+</div>
+ 
+</main>
+    {% endblock %}

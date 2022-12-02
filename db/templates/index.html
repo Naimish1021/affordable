@@ -1,0 +1,71 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %} Affordable Housing{% endblock title %}
+
+
+{% block body %}
+<div class="py-6 md:py-12 lg:w-10/12 ">
+  
+  <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
+    <em>FIND BEST AFFORDABLE HOUSING </em> <br> NEAR YOU
+  </h1>
+  
+</div>
+
+<!-- List NG0 / GOV / ICON START -->
+
+
+<div class="container md:mt-24 mt-16">
+<div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-6 gap-[30px]">
+<div class="md:px-6 transition duration-500 rounded-2xl text-center">
+<article  class="rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:shadow-sm">
+  <div class="rounded-[10px] bg-white p-4 !pt-20 sm:p-6">
+      <p class="title h5 text-lg font-medium hover:text-indigo-600">Government & Housing Authorities</p>
+        <p class="text-slate-400 mt-3">The government and housing authorities are responsible for ensuring that all residents have access to safe and affordable housing. </p>
+ </div>
+</article>
+</div>
+
+<div class="md:px-6 transition duration-500 rounded-2xl text-center">
+  <article  class="rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:shadow-sm">
+    <div class="rounded-[10px] bg-white p-4 !pt-20 sm:p-6">
+        <p class="title h5 text-lg font-medium hover:text-indigo-600">Government & Housing Authorities</p>
+          <p class="text-slate-400 mt-3">The government and housing authorities are responsible for ensuring that all residents have access to safe and affordable housing. </p>
+   </div>
+  </article>
+  </div>
+
+  <div class="md:px-6 transition duration-500 rounded-2xl text-center">
+    <article  class="rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:shadow-sm">
+      <div class="rounded-[10px] bg-white p-4 !pt-20 sm:p-6">
+          <p class="title h5 text-lg font-medium hover:text-indigo-600">Government & Housing Authorities</p>
+            <p class="text-slate-400 mt-3">The government and housing authorities are responsible for ensuring that all residents have access to safe and affordable housing. </p>
+     </div>
+    </article>
+    </div>
+
+</div>
+</div>
+
+  <!-- List NG0 / GOV / ICON END-->
+  <br><br>
+<hr>
+
+
+
+<main class="py-6">
+  <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px] mt-8">
+    {% for i in list %}
+  <a href = './state/{{i.state|slugify}}/'class="lg:col-span-4 md:col-span-6">
+    <div class="flex transition-all duration-500 hover:scale-105 shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 ease-in-out items-center p-3 rounded-md bg-white dark:bg-slate-900"> 
+        <div class="flex-1">
+            <h4 class="mb-0 text-lg font-medium">{{i.state}}</h4>
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+</div>
+ 
+</main>
+{% endblock body %}
